@@ -1,0 +1,31 @@
+{
+  "name": "@starter/email",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "exports": {
+    ".": "./src/index.ts",
+    "./templates/*": "./src/templates/*.tsx"
+  },
+  "scripts": {
+    "clean": "git clean -xdf node_modules dist .turbo .tsbuildinfo",
+    "dev": "email dev -p 3001 --dir ./src/templates",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@react-email/components": "^1.0.1",
+    "@starter/env": "workspace:*",
+    "react": "^19.2.3",
+    "react-dom": "^19.2.3",
+    "react-email": "^5.0.8",
+    "resend": "^6.6.0",
+    "zod": "^4.2.1"
+  },
+  "devDependencies": {
+    "@starter/tsconfig": "workspace:*",
+    "@types/bun": "^1.3.4",
+    "@types/react": "^19.2.7",
+    "@types/react-dom": "^19.2.3",
+    "typescript": "^5.9.3"
+  }
+}

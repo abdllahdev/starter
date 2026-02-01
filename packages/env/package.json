@@ -1,0 +1,19 @@
+{
+  "name": "@starter/env",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "exports": {
+    ".": "./src/index.ts",
+    "./server": "./src/server.ts",
+    "./web": "./src/web.ts"
+  },
+  "dependencies": {
+    "@t3-oss/env-core": "^0.13.0",
+    "zod": "^4.2.1"
+  },
+  "devDependencies": {
+    "@starter/tsconfig": "workspace:*",
+    "typescript": "^5.9.3"
+  }
+}

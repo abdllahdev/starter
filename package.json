@@ -1,0 +1,38 @@
+{
+  "name": "starter",
+  "private": true,
+  "workspaces": [
+    "apps/*",
+    "packages/*",
+    "tooling/*"
+  ],
+  "scripts": {
+    "build": "turbo build",
+    "clean": "turbo clean && rm -rf node_modules .turbo",
+    "db:generate": "turbo run db:generate",
+    "db:migrate": "turbo run db:migrate",
+    "db:pull": "turbo run db:pull",
+    "db:push": "turbo run db:push",
+    "db:studio": "turbo run db:studio",
+    "dev": "turbo dev",
+    "format": "oxfmt --write .",
+    "format:check": "oxfmt --check .",
+    "lint": "oxlint",
+    "lint:fix": "oxlint --fix",
+    "prepublishOnly": "turbo prepublishOnly",
+    "test": "turbo test",
+    "test:watch": "turbo test:watch",
+    "typecheck": "turbo typecheck"
+  },
+  "devDependencies": {
+    "eslint-plugin-perfectionist": "^5.4.0",
+    "oxfmt": "^0.23.0",
+    "oxlint": "^1.38.0",
+    "turbo": "^2.5.4",
+    "typescript": "^5.9.3"
+  },
+  "engines": {
+    "node": ">=22"
+  },
+  "packageManager": "bun@1.3.5"
+}
